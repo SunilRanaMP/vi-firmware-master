@@ -1,22 +1,58 @@
-.. OpenXC documentation master file, created by
-   sphinx-quickstart on Fri Dec 18 19:13:18 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+=================================
+OpenXC Vehicle Interface Firmware
+=================================
 
-Welcome to OpenXC's documentation!
-==================================
+.. image:: /_static/logo.png
 
-Contents:
+:Version: 7.1.0
+:Web: http://openxcplatform.com
+:Documentation: http://vi-firmware.openxcplatform.com
+:Source: http://github.com/openxc/vi-firmware
+
+The OpenXC vehicle interface (VI) firmware runs on a microcontroller connected
+to one or more CAN buses. It receives either all CAN messages or a filtered
+subset, performs any unit conversion or factoring required and outputs a generic
+version to a USB, Bluetooth or network interface.
+
+.. WARNING::
+   This portion of the site covers advanced topics such as writing and compiling
+   your own firmware from source. These steps are NOT required for flashing a
+   pre-compiled binary firmware.
+
+   If you've downloaded a pre-built binary firmware for your car, locate your VI
+   in the `list of supported interfaces
+   <http://openxcplatform.com/vehicle-interface/hardware.html>`_ to find
+   instructions for programming it. You don't need anything from the VI firmware
+   documentation itself - most users don't need anything in this documentation.
+   Here be dragons!
 
 .. toctree::
-   :maxdepth: 2
+    :maxdepth: 2
 
+    getting-started/getting-started
 
+.. toctree::
+    :maxdepth: 1
 
-Indices and tables
-==================
+    config/config
+    compile/compiling
+    platforms/platforms
+    advanced/advanced
+    output
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+    :maxdepth: 1
 
+    testing
+    contributing
+    license-disclosure
+
+License
+-------
+
+Copyright (c) 2012-2014 Ford Motor Company
+
+Licensed under the BSD license.
+
+This software depends on other open source projects, and a binary distribution
+may contain code covered by :doc:`other licenses <license-disclosure>`.
